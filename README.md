@@ -1,8 +1,8 @@
 # jsonplaceholder
 
 1. Technologies used:
-    Java 11
-    Spring-boot 
+    Java 11,
+    Spring-boot,
     Maven  
   
   
