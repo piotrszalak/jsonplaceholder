@@ -23,7 +23,7 @@ public class ParserService {
     }
 
     public void saveToJsonFile(){
-        String path = "jsonStorage/";
+        String path = "src/main/resources/jsonStorage/";
         String suffix = ".json";
 
         for (Post post : getPostsFromJsonPlaceholder()) {
