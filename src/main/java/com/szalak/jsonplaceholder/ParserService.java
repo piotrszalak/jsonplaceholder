@@ -8,6 +8,9 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,8 +25,9 @@ public class ParserService {
         this.restTemplate = restTemplate;
     }
 
-    public void saveToJsonFile(){
-        String path = "src/main/java/com/szalak/jsonplaceholder/jsonStorage/";
+    public void saveToJsonFile() throws IOException {
+        Files.createDirectory(Paths.get("jsonStorage/"));
+        String path = "jsonStorage/";
         String suffix = ".json";
 
         for (Post post : getPostsFromJsonPlaceholder()) {
